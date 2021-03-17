@@ -60,7 +60,7 @@ function gameOver(gameWon) {
 	for (var i = 0; i < cells.length; i++) {
 		cells[i].removeEventListener('click', turnClick, false);
 	}
-	declareWinner(gameWon.player == huPlayer ? "You win!" : "You lose.");
+	declareWinner(gameWon.player == huPlayer ? "Ganaste" : "Perdiste");
 	
 }
 
@@ -83,7 +83,7 @@ function checkTie() {
 			cells[i].style.backgroundColor = "green";
 			cells[i].removeEventListener('click', turnClick, false);
 		}
-		declareWinner("Tie Game!")
+		declareWinner("Empate")
 		return true;
 	}
 	return false;
